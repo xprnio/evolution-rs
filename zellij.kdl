@@ -1,0 +1,29 @@
+layout {
+	tab_template name="layout-tab" {
+		children
+	    pane size=1 borderless=true {
+	        plugin location="zellij:compact-bar"
+	    }
+	}
+	layout-tab name="Editor" split_direction="vertical" {
+		pane name="Sidetree" {
+			size "20%"
+			command "sidetree"
+		}
+		pane name="Helix" {
+			size "80%"
+			command "helix"
+		}
+	}
+	layout-tab name="Version control" {
+		pane name="LazyGit" {
+			command "lazygit"
+		}
+	}
+	layout-tab name="Application" {
+		pane name="Application"
+	}
+	layout-tab name="Terminal" {
+		pane name="Terminal"
+	}
+}
